@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h1>Tip Calculator</h1> 
-    <span>Total:</span>
+    <span id="total-label">Total:</span>
+    <span id="currency-symbol" >$</span>
     <input id="total" type="text" />
     <br />
     <div id="select-amount">
@@ -21,11 +23,20 @@
         <input type="radio" id="twenty"
         name="percent" value="twenty">
         <label for="twenty">20%</label>
+        <input type="radio" id="twentytwo"
+        name="percent" value="twentytwo">
+        <label for="twentytwo">22%</label>
+        <input type="radio" id="twentyfive"
+        name="percent" value="twentyfive">
+        <label for="twenty">25%</label>
     </div>
-    <button onclick="calculateTip(this)" >Calculate</button>
+    <button id="calculate-button" onclick="calculateTip(this)" >Calculate</button>
     <br />
     <span id="output"></span>
-    
+
+    <script>
+            document.getElementById('twenty').checked = true;
+        </script>
     <script src="script.js"></script>
 </body>
 </html>
